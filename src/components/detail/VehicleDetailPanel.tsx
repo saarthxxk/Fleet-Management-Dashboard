@@ -67,7 +67,7 @@ function GaugeBar({ label, value, accent }: { label: string; value: number; acce
 
 // ─── Overview tab ────────────────────────────────────────────────────────────
 
-function OverviewTab({ vehicle }: { vehicle: ReturnType<typeof useFleetStore>['vehicles'][number] }) {
+function OverviewTab({ vehicle }: { vehicle: Vehicle }) {
   const fuelColor =
     (vehicle.fuel_level ?? 100) < 20
       ? 'var(--color-critical)'
@@ -293,7 +293,7 @@ export function VehicleDetailPanel() {
   const selectedVehicleId = useFleetStore((s) => s.selectedVehicleId)
   const selectedTripId    = useFleetStore((s) => s.selectedTripId)
   const selectVehicle     = useFleetStore((s) => s.selectVehicle)
-  const selectTrip        = useFleetStore((s) => s.selectTrip ?? ((id: string | null) => {}))
+  const selectTrip = useFleetStore((s) => s.selectTrip ?? ((_id: string | null) => {}))
   const allAlerts         = useFleetStore((s) => s.alerts)
 
   const [activeTab, setActiveTab] = useState<Tab>('overview')
