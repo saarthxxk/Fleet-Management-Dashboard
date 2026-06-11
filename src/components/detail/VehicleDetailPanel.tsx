@@ -3,7 +3,7 @@ import { useFleetStore } from '../../store/useFleetStore'
 import { useVehicleDetail } from '../../hooks/useVehicleDetail'
 import { SkeletonLoader } from '../ui/SkeletonLoader'
 import { EmptyState } from '../ui/EmptyState'
-import type { Trip, VehicleAlert } from '../../types'
+import type { Trip, VehicleAlert, Vehicle } from '../../types'
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 

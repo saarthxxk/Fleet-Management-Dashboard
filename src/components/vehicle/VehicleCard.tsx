@@ -152,7 +152,7 @@ export function VehicleCard({ vehicle, isSelected, onClick }: VehicleCardProps) 
       <div className="flex items-center justify-between gap-3">
         {/* Fuel indicator */}
         <div className="flex items-center gap-1.5 flex-1 min-w-0">
-          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: 'var(--color-text-muted)', shrink: 0 }}>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ color: 'var(--color-text-muted)', flexShrink: 0 }}>
             <path d="M3 22V9a2 2 0 012-2h10a2 2 0 012 2v13" />
             <path d="M3 9V5a2 2 0 012-2h10a2 2 0 012 2v4" />
             <path d="M17 4h2a2 2 0 012 2v3a1 1 0 01-1 1h-3" />

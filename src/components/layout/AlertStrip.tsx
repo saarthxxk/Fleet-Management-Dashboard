@@ -155,9 +155,6 @@ export function AlertStrip() {
 
   const total = vehicles.length;
   const active = vehicles.filter((v) => v.is_active).length;
-  const offline = vehicles.filter(
-    (v) => !v.is_active || v.health_status === "offline",
-  ).length;
   const needAttention = vehicles.filter(
     (v) => v.health_status === "warning" || v.health_status === "critical",
   ).length;

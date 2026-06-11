@@ -36,10 +36,10 @@ export function MapView() {
   const selectedVehicle = vehicles.find((v) => v.id === selectedVehicleId) ?? null
 
   // Determine if selected trip is in-progress so RouteLayer can show correct end marker
-  const { detail } = useVehicleDetail(selectedVehicleId)
-  const selectedTrip = detail?.trips.find((t) => t.id === selectedTripId)
+  const { trips } = useVehicleDetail(selectedVehicleId)
+  const selectedTrip = trips.find((t: { id: string; status: string }) => t.id === selectedTripId)
   const isInProgress = selectedTrip?.status === 'in_progress'
-
+  
   return (
     <>
       <style>{TOOLTIP_STYLE}</style>
